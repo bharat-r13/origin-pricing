@@ -1,0 +1,18 @@
+# docker-compose.yml
+services:
+  origin-playwright:
+    build: .
+    container_name: origin-playwright
+    working_dir: /app
+
+    volumes:
+      - ./:/app
+      - ./downloads:/app/downloads
+      - ./test-results:/app/test-results
+      - ./reports:/app/reports
+
+    environment:
+      - CI=true
+      - BASE_URL=https://www.originenergy.com.au
+
+    command: ["npx", "playwright", "test", "tests/origin-pricing.spec.ts"]
