@@ -91,4 +91,4 @@ Each test run deletes any existing `origin-plan.pdf` before downloading a new on
 ## Structure
 - `pages/`: Page Object Model classes
 - `tests/`: Playwright test specs (no business logic)
-- `utils/`: File, PDF, and assertion utilities
+- `utils/`: File, PDF, and assertion utilities.
